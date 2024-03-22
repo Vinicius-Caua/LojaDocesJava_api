@@ -19,7 +19,7 @@ public class DoceController {
     @Transactional
     public void cadastrar(@RequestBody @Valid DadosCadastroDoces dados){
 
-        repository.save(new Doce(dados)); //Criado um construtor na classe Doce...
+        repository.save(new Doce(dados)); //Criado um construtor na classe Doce
 
     }
 
