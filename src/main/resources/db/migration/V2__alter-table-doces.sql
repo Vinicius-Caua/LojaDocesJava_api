@@ -1,0 +1,1 @@
+ALTER TABLE doce MODIFY quantidade INT(50) NOT NULL;
