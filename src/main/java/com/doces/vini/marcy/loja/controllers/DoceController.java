@@ -29,9 +29,16 @@ public class DoceController {
     }
 
     @PutMapping
-    @Transactional //Se caso der algo de errado ela volta as informacoes originais
+    @Transactional
     public void atualizar(@RequestBody @Valid DadosAtualizarDoces dados){
         var doce = repository.getReferenceById(dados.id());
         doce.atualizarInformacoes(dados);
     }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void excluir(@PathVariable Long id){
+        repository.deleteById(id);
+    }
+
 }
